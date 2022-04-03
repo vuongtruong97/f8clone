@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+//Layouts
+import { Header, Content, Footer } from "./Layouts";
+
+// font
+import WebFont from "webfontloader";
+// Icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+library.add(fas, fab, far);
 
 function App() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Droid Sans", "Chilanka"],
+      },
+    });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Content></Content>
+      <Footer></Footer>
     </div>
   );
 }

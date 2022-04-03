@@ -1,0 +1,100 @@
+@import "../../../SASS/abstracts/abstracts.scss";
+@import "../../../SASS/animation/animation";
+a {
+  text-decoration: none;
+}
+.sideNav_wrap {
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 999;
+  top: 74px;
+  @extend %flex-center;
+  flex-direction: column;
+  .createBtn {
+    @extend %flex-center;
+    font-size: 1.6rem;
+    width: 44px;
+    height: 44px;
+    background-color: #1473e6;
+    color: $white-color;
+    border-radius: 50%;
+    margin: 8px 0 2px;
+    cursor: pointer;
+    user-select: none;
+    &:hover > svg {
+      transform: scale(1.4);
+    }
+    &.active > svg {
+      transform: rotate(45deg) scale(1.4);
+    }
+    svg {
+      transition: 0.2s linear;
+    }
+    .createBlog {
+      animation-name: fadeIn;
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.3s;
+      position: absolute;
+      z-index: 999;
+      min-width: 200px;
+      height: 57px;
+      background-color: $white-color;
+      border-radius: 10px;
+      inset: 0px auto auto 0px;
+      top: 62px;
+      left: 26px;
+      margin: 0;
+      max-width: calc(100vw - 10px);
+      @include box-shadow1;
+      color: $text-color;
+      display: flex;
+      padding: 12px 20px;
+      align-items: center;
+
+      &:hover > svg {
+        transform: rotate(-135deg);
+      }
+      svg {
+        transition: transform 0.4s linear;
+      }
+      span {
+        font-size: 1.4rem;
+        margin-left: 16px;
+      }
+    }
+  }
+  .sideNav_list {
+    @extend %flex-center;
+    flex-direction: column;
+    margin: 10px 0;
+    @extend %flex-center;
+    .navOption {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 4px;
+      color: #404040;
+      font-size: 1.7rem;
+      &:hover {
+        background-color: #f5f5f5;
+        color: #1a1a1a;
+      }
+      &.active {
+        background-color: #e8ebed;
+        color: #1a1a1a;
+        span {
+          color: #000;
+        }
+      }
+      span {
+        margin-top: 6px;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

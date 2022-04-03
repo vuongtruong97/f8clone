@@ -1,0 +1,12 @@
+.content_withSideBar {
+  min-height: 200vh;
+  display: flex;
+
+  .content_sideNav_wrap {
+    flex-shrink: 0;
+    width: 96px;
+  }
+  .content_main {
+    max-width: calc(100% - 96px);
+  }
+}
