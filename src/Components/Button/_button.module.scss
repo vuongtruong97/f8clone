@@ -1,23 +1,24 @@
-@import "../../SASS/main.scss";
+@import '../../SASS/main.scss';
 .btn {
-  border: none;
-  margin: 0;
-  padding: 0 20px;
-  min-width: 120px;
-  max-width: 200px;
-  height: 34px;
-  border-radius: 999px;
-  background-color: $white-color;
+    border: none;
+    margin: 0;
+    padding: 0 20px;
+    min-width: 120px;
+    max-width: 200px;
+    height: 34px;
+    border-radius: 999px;
+    background-color: $white-color;
 
-  font-family: $font-family;
-  font-weight: 600;
-  font-size: 1.4rem;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.8;
-  }
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    white-space: nowrap;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 .primary {
-  background-color: $primary-color;
-  color: $white-color;
+    background-color: $primary-color;
+    color: $white-color;
 }

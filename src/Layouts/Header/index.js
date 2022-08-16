@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Component
 import { Button } from '../../Components'
 import f8Logo from '../../Assets/photos/f8logo.png'
+import f8LogoNew from '../../Assets/photos/f8-icon.18cd71cfcfa33566a22b.png'
 
 function Header() {
     const [login, setLogin] = useState(false)
@@ -102,9 +103,7 @@ function Header() {
                             </div>
                             <img
                                 className={clsx(Styles.userInfor_avatar)}
-                                src={
-                                    'https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-1/273644546_1115594742627888_1943189319806226913_n.jpg?stp=dst-jpg_p160x160&_nc_cat=103&ccb=1-5&_nc_sid=7206a8&_nc_ohc=3OMb5J_yLyAAX-Pxins&_nc_ht=scontent-hkt1-2.xx&oh=00_AT_99-U-zsycnYqjXBfxMCJKMgs5DXTXdKuo6mEWhf_eRw&oe=62464655'
-                                }
+                                src={f8LogoNew}
                             />
                         </div>
                     )}
